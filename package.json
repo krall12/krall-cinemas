@@ -13,7 +13,10 @@
     "styled-components": "^4.0.0"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.8.0"
+    "@types/node": "^13.5.0",
+    "@types/react": "^16.9.19",
+    "babel-plugin-styled-components": "^1.8.0",
+    "typescript": "^3.7.5"
   },
   "license": "ISC"
 }
