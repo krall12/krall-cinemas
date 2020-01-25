@@ -7,10 +7,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "framer-motion": "^1.7.3",
     "next": "latest",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "styled-components": "^4.0.0"
+    "styled-components": "^4.0.0",
+    "typography": "^0.16.19",
+    "typography-theme-alton": "^0.16.19"
   },
   "devDependencies": {
     "@types/node": "^13.5.0",
