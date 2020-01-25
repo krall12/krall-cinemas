@@ -6,10 +6,20 @@ import Container from '../elements/container'
 
 const BREAK_MOBILE = '600px'
 
-const Header = styled.header``
+const Header = styled.header`
+  border-bottom: 1px solid ${({ theme }) => theme.colorBorder};
+`
+
+const Inner = styled(Container)`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`
 
 const Logo = styled.p`
   margin: 0;
+  color: ${({ theme }) => theme.color1};
+  line-height: 1;
 
   > span:first-of-type {
     font-size: 40px;
@@ -38,9 +48,10 @@ const LinkTag = styled.a`
   padding: 24px 12px;
   display: block;
   cursor: pointer;
+  color: ${({ theme }) => theme.color1};
 
   &:hover {
-    color: ${({ theme }) => theme.color4};
+    color: ${({ theme }) => theme.color3};
   }
 
   @media (max-width: ${BREAK_MOBILE}) {
@@ -53,7 +64,7 @@ const LinkTag = styled.a`
 export default () => {
   return (
     <Header>
-      <Container>
+      <Inner>
         <Logo>
           <span>K</span>
           <span>C</span>
@@ -67,7 +78,7 @@ export default () => {
             </li>
           ))}
         </LinkList>
-      </Container>
+      </Inner>
     </Header>
   )
 }
@@ -88,9 +99,5 @@ const links = [
   {
     title: 'Pricing',
     href: '#pricing'
-  },
-  {
-    title: 'Contact',
-    href: '#contact'
   }
 ]

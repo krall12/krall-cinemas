@@ -5,43 +5,47 @@ import { motion } from 'framer-motion'
 import Container from '../elements/container'
 
 const Section = styled.section`
-  background: ${({ theme }) => theme.color4};
-  padding: 100px 0;
+  padding: 60px 0;
 `
 
 const Video = styled.div`
-  height: 400px;
-  width: 700px;
+  height: 600px;
+  width: 100%;
   max-width: 100%;
   background: #000;
   content: '';
 `
 
-const OverlayText = styled.h1`
-  font-size: 70px;
-  color: ${({ theme }) => theme.white};
-  text-shadow: 2px 2px 0px ${({ theme }) => theme.color1}, 4px 4px 0px ${({ theme }) => theme.color2};
-  position: absolute;
-  left: 6%;
-  bottom: 70px;
-  margin: 0;
+const Inner = styled(Container)`
+  text-align: center;
+`
+
+const MainText = styled.h1`
+  font-size: 50px;
+  color: ${({ theme }) => theme.color1};
+  margin-bottom: 14px;
+`
+
+const SubText = styled.p`
+  font-size: 24px;
+  color: ${({ theme }) => theme.color1};
+  margin-bottom: 60px;
 `
 
 export default () => {
   return (
     <Section>
-      <Container>
-        <div>
-          <OverlayText dangerouslySetInnerHTML={{ __html: content.overlayText }} />
-          <Video />
-        </div>
-      </Container>
+      <Inner>
+        <MainText dangerouslySetInnerHTML={{ __html: content.mainText }} />
+        <SubText dangerouslySetInnerHTML={{ __html: content.subText }} />
+        <Video />
+      </Inner>
     </Section>
   )
 }
 
 const content = {
   videoSrc: '',
-  overlayText: 'Cinematic<br />Wedding<br />Videography',
+  mainText: 'Cinematic Wedding Videography',
   subText: 'Capturing Priceless Moments &amp; Memories'
 }

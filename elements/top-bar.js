@@ -6,6 +6,9 @@ import Container from './container'
 const TopBar = styled.div`
   background: ${({ theme }) => theme.color1};
   padding: 6px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 `
 
 const Button = styled.a`
