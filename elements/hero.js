@@ -2,33 +2,46 @@ import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
+import Container from '../elements/container'
+
 const Section = styled.section`
   background: ${({ theme }) => theme.color4};
-  padding: 200px 0;
+  padding: 100px 0;
 `
 
-const Container = styled.div`
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-`
-
-const Square = styled(motion.div)`
-  height: 300px;
-  width: 300px;
-  position: absolute;
+const Video = styled.div`
+  height: 400px;
+  width: 700px;
+  max-width: 100%;
+  background: #000;
   content: '';
-  background: #fff;
-  left: 40px;
-  top: 200px;
+`
+
+const OverlayText = styled.h1`
+  font-size: 70px;
+  color: ${({ theme }) => theme.white};
+  text-shadow: 2px 2px 0px ${({ theme }) => theme.color1}, 4px 4px 0px ${({ theme }) => theme.color2};
+  position: absolute;
+  left: 6%;
+  bottom: 70px;
+  margin: 0;
 `
 
 export default () => {
   return (
     <Section>
-      <Container>contet here</Container>
-      <Square drag dragTransition={{ power: 0.2 }} />
+      <Container>
+        <div>
+          <OverlayText dangerouslySetInnerHTML={{ __html: content.overlayText }} />
+          <Video />
+        </div>
+      </Container>
     </Section>
   )
+}
+
+const content = {
+  videoSrc: '',
+  overlayText: 'Cinematic<br />Wedding<br />Videography',
+  subText: 'Capturing Priceless Moments &amp; Memories'
 }

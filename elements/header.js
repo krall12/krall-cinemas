@@ -2,30 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 
+import Container from '../elements/container'
+
 const BREAK_MOBILE = '600px'
 
-const Header = styled.header`
-  background: ${({ theme }) => theme.color1};
-  box-shadow: ${({ theme }) => theme.boxShadow1};
-`
-
-const Container = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  @media (max-width: ${BREAK_MOBILE}) {
-    flex-direction: column;
-    padding-top: 4px;
-  }
-`
+const Header = styled.header``
 
 const Logo = styled.p`
   margin: 0;
-  color: #fff;
 
   > span:first-of-type {
     font-size: 40px;
@@ -54,7 +38,6 @@ const LinkTag = styled.a`
   padding: 24px 12px;
   display: block;
   cursor: pointer;
-  color: #fff;
 
   &:hover {
     color: ${({ theme }) => theme.color4};

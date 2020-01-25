@@ -8,5 +8,7 @@ const Main = styled.main``
 export default () => (
   <Main>
     <Hero />
+
+    <h2>Capturing Priceless Moments &amp; Memories</h2>
   </Main>
 )
