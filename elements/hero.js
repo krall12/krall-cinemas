@@ -63,8 +63,8 @@ export default () => {
   return (
     <Section>
       <Inner>
-        <MainText dangerouslySetInnerHTML={{ __html: content.hero.mainText }} />
-        <SubText dangerouslySetInnerHTML={{ __html: content.hero.subText }} />
+        <MainText>{content.hero.mainText}</MainText>
+        <SubText>{content.hero.subText}</SubText>
         <Video />
         <Cirlce />
         <Cirlce css="right: -40px; left: auto; top: 40vh;" />

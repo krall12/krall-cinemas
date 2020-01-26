@@ -26,12 +26,12 @@ export default {
   hero: {
     videoSrc: '',
     mainText: 'Cinematic Wedding Videography',
-    subText: 'Capturing Priceless Moments &amp; Memories'
+    subText: 'Capturing Priceless Moments & Memories'
   },
   about: {
     mainText: 'About me',
     subText: 'Storyteller at heart',
-    meAsset: '',
+    meAsset: '/me.jpg',
     description:
       'Hi I am Megan! I am 25 years old and started filming in 2019. Ever since I picked up a camera, I knew this was meant for me. I put my whole heart and soul into creating these films. I love it so much because I help couples hold on to these very special memories forever.'
   }
