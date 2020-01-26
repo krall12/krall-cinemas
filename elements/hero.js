@@ -1,11 +1,12 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { motion } from 'framer-motion'
 
 import Container from '../elements/container'
 
 const Section = styled.section`
-  padding: 60px 0;
+  padding: 80px 0;
+  overflow-x: hidden;
 `
 
 const Video = styled.div`
@@ -29,7 +30,32 @@ const MainText = styled.h1`
 const SubText = styled.p`
   font-size: 24px;
   color: ${({ theme }) => theme.color1};
-  margin-bottom: 60px;
+  margin-bottom: 80px;
+`
+
+const Cirlce = styled(motion.div)`
+  height: 24vw;
+  width: 24vw;
+  background: ${({ theme }) => theme.color4};
+  position: absolute;
+  left: -40px;
+  top: 8%;
+  border-radius: 50%;
+  z-index: -1;
+  border: 0;
+
+  ${({ color }) =>
+    color &&
+    css`
+      background: ${color};
+    `}
+
+  ${({ outline, color, theme }) =>
+    outline &&
+    css`
+      background: transparent;
+      border: 2px solid ${color || theme.color4};
+    `}
 `
 
 export default () => {
@@ -39,6 +65,9 @@ export default () => {
         <MainText dangerouslySetInnerHTML={{ __html: content.mainText }} />
         <SubText dangerouslySetInnerHTML={{ __html: content.subText }} />
         <Video />
+        <Cirlce />
+        <Cirlce css="right: -40px; left: auto; top: 40vh;" />
+        <Cirlce outline css="width: 30vw; height: 30vw; right: 50vw; left: auto; top: auto; bottom: -60px;" />
       </Inner>
     </Section>
   )

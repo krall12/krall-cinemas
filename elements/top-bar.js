@@ -47,7 +47,7 @@ export default () => {
     <TopBar>
       <Inner>
         <Button phone href="tel:7542100757">
-          <i class="fas fa-phone"></i> 754-210-0757
+          <i className="fas fa-phone"></i> 754-210-0757
         </Button>
         <Button messenger href="https://www.facebook.com/krallcinemas/" target="_blank">
           <i className="fab fa-facebook-messenger"></i> Send Message
