@@ -2,8 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Container from './container'
-import content from '../content'
+import MainText from './main-text'
+import SubText from './sub-text'
 import Circle from './circle'
+
+import content from '../content'
 
 const Section = styled.section`
   padding: 60px 0;
@@ -12,18 +15,6 @@ const Section = styled.section`
 
 const Center = styled(Container)`
   text-align: center;
-`
-
-const MainText = styled.h2`
-  font-size: 50px;
-  color: ${({ theme }) => theme.color1};
-  margin-bottom: 14px;
-`
-
-const SubText = styled.p`
-  font-size: 24px;
-  color: ${({ theme }) => theme.color1};
-  margin-bottom: 60px;
 `
 
 const ServiceItem = styled.div`

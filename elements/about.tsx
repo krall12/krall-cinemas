@@ -2,6 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Container from './container'
+import MainText from './main-text'
+import SubText from './sub-text'
+
 import content from '../content'
 
 const Section = styled.section`
@@ -12,18 +15,6 @@ const Section = styled.section`
 
 const Inner = styled(Container)`
   text-align: center;
-`
-
-const MainText = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.color1};
-  margin-bottom: 14px;
-`
-
-const SubText = styled.p`
-  font-size: 24px;
-  color: ${({ theme }) => theme.color1};
-  margin-bottom: 40px;
 `
 
 const ContentWrap = styled.div`
