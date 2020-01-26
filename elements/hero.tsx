@@ -34,6 +34,12 @@ const SubText = styled.p`
   margin-bottom: 80px;
 `
 
+const transition = {
+  yoyo: Infinity,
+  ease: 'linear',
+  duration: 5
+}
+
 export default () => {
   return (
     <Section>
@@ -41,8 +47,8 @@ export default () => {
         <MainText>{content.hero.mainText}</MainText>
         <SubText>{content.hero.subText}</SubText>
         <Video />
-        <Circle />
-        <Circle css="right: -40px; left: auto; top: 40vh;" />
+        <Circle animate={{ opacity: .2 }} transition={transition} />
+        <Circle animate={{ scale: 1.2 }} transition={transition} css="right: -40px; left: auto; top: 40vh;" />
         <Circle outline css="width: 30vw; height: 30vw; right: 50vw; left: auto; top: auto; bottom: -60px;" />
       </Inner>
     </Section>
