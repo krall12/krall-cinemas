@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 
 import Container from './container'
+import content from '../content'
 
 const TopBar = styled.div`
   background: ${({ theme }) => theme.color1};
@@ -43,13 +44,17 @@ const Inner = styled(Container)`
 `
 
 export default () => {
+  const cleanedNumber = React.useMemo(() => {
+    return content.topbar.phoneNumber.replace(/\D/g, '')
+  }, [content.topbar.phoneNumber])
+
   return (
     <TopBar>
       <Inner>
-        <Button phone href="tel:7542100757">
-          <i className="fas fa-phone"></i> 754-210-0757
+        <Button phone href={`tel:${cleanedNumber}`}>
+          <i className="fas fa-phone"></i> {content.topbar.phoneNumber}
         </Button>
-        <Button messenger href="https://www.facebook.com/krallcinemas/" target="_blank">
+        <Button messenger href={content.topbar.messengerHref} target="_blank">
           <i className="fab fa-facebook-messenger"></i> Send Message
         </Button>
       </Inner>

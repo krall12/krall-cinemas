@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components'
 import { motion } from 'framer-motion'
 
 import Container from '../elements/container'
+import content from '../content'
 
 const Section = styled.section`
   padding: 80px 0;
@@ -62,8 +63,8 @@ export default () => {
   return (
     <Section>
       <Inner>
-        <MainText dangerouslySetInnerHTML={{ __html: content.mainText }} />
-        <SubText dangerouslySetInnerHTML={{ __html: content.subText }} />
+        <MainText dangerouslySetInnerHTML={{ __html: content.hero.mainText }} />
+        <SubText dangerouslySetInnerHTML={{ __html: content.hero.subText }} />
         <Video />
         <Cirlce />
         <Cirlce css="right: -40px; left: auto; top: 40vh;" />
@@ -71,10 +72,4 @@ export default () => {
       </Inner>
     </Section>
   )
-}
-
-const content = {
-  videoSrc: '',
-  mainText: 'Cinematic Wedding Videography',
-  subText: 'Capturing Priceless Moments &amp; Memories'
 }

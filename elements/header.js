@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Link from 'next/link'
 
 import Container from '../elements/container'
+import content from '../content'
 
 const BREAK_MOBILE = '600px'
 
@@ -70,7 +71,7 @@ export default () => {
           <span>C</span>
         </Logo>
         <LinkList>
-          {links.map((link, key) => (
+          {content.header.links.map((link, key) => (
             <li key={key}>
               <Link href={link.href}>
                 <LinkTag>{link.title}</LinkTag>
@@ -82,22 +83,3 @@ export default () => {
     </Header>
   )
 }
-
-const links = [
-  {
-    title: 'About',
-    href: '#about'
-  },
-  {
-    title: 'Services',
-    href: '#services'
-  },
-  {
-    title: 'Portfolio',
-    href: '#portfolio'
-  },
-  {
-    title: 'Pricing',
-    href: '#pricing'
-  }
-]

@@ -2,13 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Hero from '../elements/hero'
+import About from '../elements/about'
 
 const Main = styled.main``
 
 export default () => (
   <Main>
     <Hero />
-
-    <h2>Capturing Priceless Moments &amp; Memories</h2>
+    <About />
   </Main>
 )
