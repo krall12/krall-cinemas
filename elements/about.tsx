@@ -66,7 +66,7 @@ const Description = styled.p`
 
 export default () => {
   return (
-    <Section>
+    <Section id="about">
       <Inner>
         <MainText>{content.about.mainText}</MainText>
         <SubText>{content.about.subText}</SubText>
