@@ -33,6 +33,7 @@ export default class MyApp extends App {
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.css" />
           <link href="https://fonts.googleapis.com/css?family=Domine:400,700|Open+Sans:400,600,700&display=swap" rel="stylesheet" />
+          <style>{`html{scroll-behavior: smooth}`}</style>
           <style>{typography.toString()}</style>
         </Head>
         <TopBar />

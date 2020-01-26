@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import Container from './container'
 import content from '../content'
+import Circle from './circle'
 
 const Section = styled.section`
   padding: 60px 0;
@@ -27,13 +28,22 @@ const SubText = styled.p`
 
 const ServiceItem = styled.div`
   display: flex;
-  padding: 20px 40px;
+  padding: 30px;
   transition: all 150ms;
-  border: 1px solid #eee;
   border-radius: 8px;
 
   &:hover {
-    box-shadow: ${({ theme }) => theme.boxShadow2};
+    background: #fff;
+    box-shadow: ${({ theme }) => theme.boxShadow1};
+  }
+
+  @media (max-width: 600px) {
+    padding: 0;
+    margin-bottom: 30px;
+
+    &:hover {
+      box-shadow: none;
+    }
   }
 `
 
@@ -43,13 +53,17 @@ const IconWrap = styled.div`
   justify-content: center;
   height: 60px;
   min-width: 60px;
-  background: ${({ theme }) => theme.color3};
+  background: ${({ theme }) => theme.color2};
   border-radius: 50%;
   margin-right: 30px;
+  color: #fff;
+  font-size: 24px;
 
-  i {
-    color: #fff;
-    font-size: 24px;
+  @media (max-width: 600px) {
+    margin-right: 14px;
+    height: 50px;
+    min-width: 50px;
+    font-size: 20px;
   }
 `
 
@@ -63,6 +77,17 @@ const ContentWrap = styled.div`
     line-height: 2;
     margin-bottom: 0;
   }
+
+  @media (max-width: 600px) {
+    h3 {
+      margin-top: 8px;
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+  }
 `
 
 export default () => {
@@ -73,7 +98,9 @@ export default () => {
         <SubText>{content.services.subText}</SubText>
       </Center>
 
-      <Container css="display: grid; grid-template-columns: 1fr 1fr 1fr; grid-gap: 20px;">
+      <Container>
+        <Circle css="opacity: .5;" />
+        <Circle css="right: -40px; left: auto; top: 30vh; opacity: .4;" />
         {content.services.group.map((service, key) => (
           <ServiceItem key={key}>
             <IconWrap>

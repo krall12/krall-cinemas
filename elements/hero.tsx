@@ -1,8 +1,8 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { motion } from 'framer-motion'
 
 import Container from './container'
+import Circle from './circle'
 import content from '../content'
 
 const Section = styled.section`
@@ -34,31 +34,6 @@ const SubText = styled.p`
   margin-bottom: 80px;
 `
 
-const Cirlce = styled(motion.div)`
-  height: 24vw;
-  width: 24vw;
-  background: ${({ theme }) => theme.color4};
-  position: absolute;
-  left: -40px;
-  top: 8%;
-  border-radius: 50%;
-  z-index: -1;
-  border: 0;
-
-  ${({ color }) =>
-    color &&
-    css`
-      background: ${color};
-    `}
-
-  ${({ outline, color, theme }) =>
-    outline &&
-    css`
-      background: transparent;
-      border: 2px solid ${color || theme.color4};
-    `}
-`
-
 export default () => {
   return (
     <Section>
@@ -66,9 +41,9 @@ export default () => {
         <MainText>{content.hero.mainText}</MainText>
         <SubText>{content.hero.subText}</SubText>
         <Video />
-        <Cirlce />
-        <Cirlce css="right: -40px; left: auto; top: 40vh;" />
-        <Cirlce outline css="width: 30vw; height: 30vw; right: 50vw; left: auto; top: auto; bottom: -60px;" />
+        <Circle />
+        <Circle css="right: -40px; left: auto; top: 40vh;" />
+        <Circle outline css="width: 30vw; height: 30vw; right: 50vw; left: auto; top: auto; bottom: -60px;" />
       </Inner>
     </Section>
   )
