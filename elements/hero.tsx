@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import { motion } from 'framer-motion'
 
-import Container from '../elements/container'
+import Container from './container'
 import content from '../content'
 
 const Section = styled.section`

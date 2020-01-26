@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 
-import Container from '../elements/container'
+import Container from './container'
 import content from '../content'
 
 const BREAK_MOBILE = '600px'
