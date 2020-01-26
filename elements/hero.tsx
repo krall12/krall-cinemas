@@ -10,12 +10,12 @@ const Section = styled.section`
   overflow-x: hidden;
 `
 
-const Video = styled.div`
-  height: 600px;
+const Video = styled.video`
   width: 100%;
-  max-width: 100%;
-  background: #000;
-  content: '';
+
+  &:focus {
+    outline: none;
+  }
 `
 
 const Inner = styled(Container)`
@@ -46,8 +46,10 @@ export default () => {
       <Inner>
         <MainText>{content.hero.mainText}</MainText>
         <SubText>{content.hero.subText}</SubText>
-        <Video />
-        <Circle animate={{ opacity: .2 }} transition={transition} />
+        <Video autoPlay loop muted playsInline>
+          <source src="/hero.mp4" type="video/mp4" />
+        </Video>
+        <Circle animate={{ opacity: 0.2 }} transition={transition} />
         <Circle animate={{ scale: 1.2 }} transition={transition} css="right: -40px; left: auto; top: 40vh;" />
         <Circle outline css="width: 30vw; height: 30vw; right: 50vw; left: auto; top: auto; bottom: -60px;" />
       </Inner>

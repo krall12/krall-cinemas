@@ -19,7 +19,7 @@ const Work = styled.div`
   margin-bottom: 60px;
 `
 
-const Video = styled.div`
+const Video = styled.iframe`
   height: 500px;
   width: 100%;
   max-width: 100%;
@@ -99,7 +99,7 @@ export default () => {
             <Type>{work.type}</Type>
             <Description>{work.description}</Description>
             <div>
-              <Video />
+              <Video src={work.youtubeUrl} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
             </div>
             {work.testimonial && (
               <Testimonial>

@@ -44,15 +44,15 @@ const Inner = styled(Container)`
 `
 
 export default () => {
-  const cleanedNumber = React.useMemo(() => {
-    return content.topbar.phoneNumber.replace(/\D/g, '')
+  const smsLink = React.useMemo(() => {
+    ;`sms:+${content.topbar.phoneNumber.replace(/\D/g, '')}Hi%20there!%20I%20am%20interested%20in%20a%20video%20from%20Krall%20Cinemas`
   }, [content.topbar.phoneNumber])
 
   return (
     <TopBar>
       <Inner>
-        <Button phone href={`tel:${cleanedNumber}`}>
-          <i className="fas fa-phone"></i> {content.topbar.phoneNumber}
+        <Button phone href={smsLink}>
+          <i className="fas fa-comment"></i> {content.topbar.phoneNumber}
         </Button>
         <Button messenger href={content.topbar.messengerHref} target="_blank">
           <i className="fab fa-facebook-messenger"></i> Send Message
