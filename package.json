@@ -7,19 +7,19 @@
     "start": "next start"
   },
   "dependencies": {
-    "framer-motion": "^1.7.3",
-    "next": "latest",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "styled-components": "^4.0.0",
+    "framer-motion": "^1.10.3",
+    "next": "^9.2.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.0",
     "typography": "^0.16.19",
     "typography-theme-alton": "^0.16.19"
   },
   "devDependencies": {
     "@types/node": "^13.5.0",
-    "@types/react": "^16.9.19",
+    "@types/react": "^16.9.32",
     "babel-plugin-styled-components": "^1.8.0",
-    "typescript": "^3.7.5"
+    "typescript": "^3.8.3"
   },
   "license": "ISC"
 }
