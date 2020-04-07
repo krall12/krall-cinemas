@@ -7,6 +7,62 @@ import Circle from './circle'
 
 import content from '../content'
 
+const transition = {
+  yoyo: Infinity,
+  ease: 'linear',
+  duration: 5,
+}
+
+export default () => {
+  return (
+    <Section id="portfolio">
+      <Container css="text-align: center;">
+        <MainText css="margin-bottom: 60px;">{content.portfolio.mainText}</MainText>
+      </Container>
+
+      {content.portfolio.works.map((work, key) => (
+        <Work key={key}>
+          <Circle
+            animate={{ scale: 1.2 }}
+            transition={transition}
+            css="right: 40px; left: auto; top: 50vh; opacity: .6;"
+          />
+          <Circle
+            animate={{ scale: 0.8 }}
+            transition={transition}
+            outline
+            css="width: 24vw; height: 24vw; left: 4vw; top: 26vw; bottom: -60px;"
+          />
+          <Underlay />
+          <Container>
+            <Type>{work.type}</Type>
+            <Description>{work.description}</Description>
+            <div>
+              <Video
+                src={work.youtubeUrl}
+                frameBorder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            {work.testimonial && (
+              <Testimonial>
+                <div>
+                  <span />
+                </div>
+                <div>
+                  <p>"{work.testimonial}"</p>
+                  <span>- {work.testimonialBy}</span>
+                </div>
+              </Testimonial>
+            )}
+          </Container>
+        </Work>
+      ))}
+    </Section>
+  )
+}
+
 const Section = styled.section`
   padding: 60px 0;
   overflow-x: hidden;
@@ -77,44 +133,3 @@ const Type = styled.span`
   margin-bottom: 10px;
   color: #fff;
 `
-const transition = {
-  yoyo: Infinity,
-  ease: 'linear',
-  duration: 5
-}
-
-export default () => {
-  return (
-    <Section id="portfolio">
-      <Container css="text-align: center;">
-        <MainText css="margin-bottom: 60px;">{content.portfolio.mainText}</MainText>
-      </Container>
-
-      {content.portfolio.works.map((work, key) => (
-        <Work key={key}>
-          <Circle animate={{ scale: 1.2 }} transition={transition} css="right: 40px; left: auto; top: 50vh; opacity: .6;" />
-          <Circle animate={{ scale: 0.8 }} transition={transition} outline css="width: 24vw; height: 24vw; left: 4vw; top: 26vw; bottom: -60px;" />
-          <Underlay />
-          <Container>
-            <Type>{work.type}</Type>
-            <Description>{work.description}</Description>
-            <div>
-              <Video src={work.youtubeUrl} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
-            </div>
-            {work.testimonial && (
-              <Testimonial>
-                <div>
-                  <span />
-                </div>
-                <div>
-                  <p>"{work.testimonial}"</p>
-                  <span>- {work.testimonialBy}</span>
-                </div>
-              </Testimonial>
-            )}
-          </Container>
-        </Work>
-      ))}
-    </Section>
-  )
-}

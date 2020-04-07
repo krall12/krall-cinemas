@@ -7,6 +7,28 @@ import content from '../content'
 
 const BREAK_MOBILE = '600px'
 
+export default () => {
+  return (
+    <Header>
+      <Inner>
+        <Logo>
+          <span>K</span>
+          <span>C</span>
+        </Logo>
+        <LinkList>
+          {content.header.links.map((link, key) => (
+            <li key={key}>
+              <Link href={link.href}>
+                <LinkTag>{link.title}</LinkTag>
+              </Link>
+            </li>
+          ))}
+        </LinkList>
+      </Inner>
+    </Header>
+  )
+}
+
 const Header = styled.header`
   border-bottom: 1px solid ${({ theme }) => theme.colorBorder};
 `
@@ -61,25 +83,3 @@ const LinkTag = styled.a`
     font-size: 14px;
   }
 `
-
-export default () => {
-  return (
-    <Header>
-      <Inner>
-        <Logo>
-          <span>K</span>
-          <span>C</span>
-        </Logo>
-        <LinkList>
-          {content.header.links.map((link, key) => (
-            <li key={key}>
-              <Link href={link.href}>
-                <LinkTag>{link.title}</LinkTag>
-              </Link>
-            </li>
-          ))}
-        </LinkList>
-      </Inner>
-    </Header>
-  )
-}

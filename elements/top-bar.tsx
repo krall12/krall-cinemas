@@ -1,8 +1,30 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import styled, { css } from 'styled-components'
 
 import Container from './container'
 import content from '../content'
+
+export default () => {
+  const smsLink = useMemo(() => {
+    ;`sms:+${content.topbar.phoneNumber.replace(
+      /\D/g,
+      ''
+    )}Hi%20there!%20I%20am%20interested%20in%20a%20video%20from%20Krall%20Cinemas`
+  }, [content.topbar.phoneNumber])
+
+  return (
+    <TopBar>
+      <Inner>
+        <Button phone href={smsLink}>
+          <i className="fas fa-comment"></i> {content.topbar.phoneNumber}
+        </Button>
+        <Button messenger href={content.topbar.messengerHref} target="_blank">
+          <i className="fab fa-facebook-messenger"></i> Send Message
+        </Button>
+      </Inner>
+    </TopBar>
+  )
+}
 
 const TopBar = styled.div`
   background: ${({ theme }) => theme.color1};
@@ -42,22 +64,3 @@ const Inner = styled(Container)`
   display: flex;
   justify-content: flex-end;
 `
-
-export default () => {
-  const smsLink = React.useMemo(() => {
-    ;`sms:+${content.topbar.phoneNumber.replace(/\D/g, '')}Hi%20there!%20I%20am%20interested%20in%20a%20video%20from%20Krall%20Cinemas`
-  }, [content.topbar.phoneNumber])
-
-  return (
-    <TopBar>
-      <Inner>
-        <Button phone href={smsLink}>
-          <i className="fas fa-comment"></i> {content.topbar.phoneNumber}
-        </Button>
-        <Button messenger href={content.topbar.messengerHref} target="_blank">
-          <i className="fab fa-facebook-messenger"></i> Send Message
-        </Button>
-      </Inner>
-    </TopBar>
-  )
-}

@@ -8,6 +8,33 @@ import Circle from './circle'
 
 import content from '../content'
 
+export default () => {
+  return (
+    <Section id="services">
+      <Center>
+        <MainText>{content.services.mainText}</MainText>
+        <SubText>{content.services.subText}</SubText>
+      </Center>
+
+      <Container>
+        <Circle css="opacity: .5;" />
+        <Circle css="right: -40px; left: auto; top: 30vh; opacity: .4;" />
+        {content.services.group.map((service, key) => (
+          <ServiceItem key={key}>
+            <IconWrap>
+              <i className={service.icon} />
+            </IconWrap>
+            <ContentWrap>
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
+            </ContentWrap>
+          </ServiceItem>
+        ))}
+      </Container>
+    </Section>
+  )
+}
+
 const Section = styled.section`
   padding: 60px 0;
   overflow-x: hidden;
@@ -80,30 +107,3 @@ const ContentWrap = styled.div`
     }
   }
 `
-
-export default () => {
-  return (
-    <Section id="services">
-      <Center>
-        <MainText>{content.services.mainText}</MainText>
-        <SubText>{content.services.subText}</SubText>
-      </Center>
-
-      <Container>
-        <Circle css="opacity: .5;" />
-        <Circle css="right: -40px; left: auto; top: 30vh; opacity: .4;" />
-        {content.services.group.map((service, key) => (
-          <ServiceItem key={key}>
-            <IconWrap>
-              <i className={service.icon} />
-            </IconWrap>
-            <ContentWrap>
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
-            </ContentWrap>
-          </ServiceItem>
-        ))}
-      </Container>
-    </Section>
-  )
-}

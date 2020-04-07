@@ -7,6 +7,22 @@ import SubText from './sub-text'
 
 import content from '../content'
 
+export default () => {
+  return (
+    <Section id="about">
+      <Inner>
+        <MainText>{content.about.mainText}</MainText>
+        <SubText>{content.about.subText}</SubText>
+
+        <ContentWrap>
+          <Image src={content.about.meAsset} alt="Megan Smith posing" />
+          <Description>{content.about.description}</Description>
+        </ContentWrap>
+      </Inner>
+    </Section>
+  )
+}
+
 const Section = styled.section`
   padding: 60px 0;
   overflow-x: hidden;
@@ -54,19 +70,3 @@ const Description = styled.p`
   text-align: left;
   line-height: 2;
 `
-
-export default () => {
-  return (
-    <Section id="about">
-      <Inner>
-        <MainText>{content.about.mainText}</MainText>
-        <SubText>{content.about.subText}</SubText>
-
-        <ContentWrap>
-          <Image src={content.about.meAsset} alt="Megan Smith posing" />
-          <Description>{content.about.description}</Description>
-        </ContentWrap>
-      </Inner>
-    </Section>
-  )
-}

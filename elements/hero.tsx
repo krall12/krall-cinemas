@@ -5,6 +5,29 @@ import Container from './container'
 import Circle from './circle'
 import content from '../content'
 
+const transition = {
+  yoyo: Infinity,
+  ease: 'linear',
+  duration: 5,
+}
+
+export default () => {
+  return (
+    <Section>
+      <Inner>
+        <MainText>{content.hero.mainText}</MainText>
+        <SubText>{content.hero.subText}</SubText>
+        <Video autoPlay loop muted playsInline>
+          <source src="/hero.mp4" type="video/mp4" />
+        </Video>
+        <Circle animate={{ opacity: 0.2 }} transition={transition} />
+        <Circle animate={{ scale: 1.2 }} transition={transition} css="right: -40px; left: auto; top: 40vh;" />
+        <Circle outline css="width: 30vw; height: 30vw; right: 50vw; left: auto; top: auto; bottom: -60px;" />
+      </Inner>
+    </Section>
+  )
+}
+
 const Section = styled.section`
   padding: 80px 0;
   overflow-x: hidden;
@@ -33,26 +56,3 @@ const SubText = styled.p`
   color: ${({ theme }) => theme.color1};
   margin-bottom: 80px;
 `
-
-const transition = {
-  yoyo: Infinity,
-  ease: 'linear',
-  duration: 5
-}
-
-export default () => {
-  return (
-    <Section>
-      <Inner>
-        <MainText>{content.hero.mainText}</MainText>
-        <SubText>{content.hero.subText}</SubText>
-        <Video autoPlay loop muted playsInline>
-          <source src="/hero.mp4" type="video/mp4" />
-        </Video>
-        <Circle animate={{ opacity: 0.2 }} transition={transition} />
-        <Circle animate={{ scale: 1.2 }} transition={transition} css="right: -40px; left: auto; top: 40vh;" />
-        <Circle outline css="width: 30vw; height: 30vw; right: 50vw; left: auto; top: auto; bottom: -60px;" />
-      </Inner>
-    </Section>
-  )
-}
