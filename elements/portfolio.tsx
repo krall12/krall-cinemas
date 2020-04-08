@@ -27,12 +27,6 @@ export default () => {
             transition={transition}
             css="right: 40px; left: auto; top: 50vh; opacity: .6;"
           />
-          <Circle
-            animate={{ scale: 0.8 }}
-            transition={transition}
-            outline
-            css="width: 24vw; height: 24vw; left: 4vw; top: 26vw; bottom: -60px;"
-          />
           <Underlay />
           <Container>
             <Type>{work.type}</Type>
@@ -81,12 +75,20 @@ const Video = styled.iframe`
   max-width: 100%;
   background: #000;
   box-shadow: ${({ theme }) => theme.boxShadow2};
+
+  @media (max-width: 768px) {
+    height: 250px;
+  }
 `
 
 const Description = styled.p`
   color: #fff;
   max-width: 65vw;
   margin-bottom: 30px;
+
+  @media (max-width: 768px) {
+    max-width: 85vw;
+  }
 `
 
 const Testimonial = styled.div`
@@ -94,17 +96,34 @@ const Testimonial = styled.div`
   align-items: flex-start;
   margin-top: 40px;
 
+  @media (max-width: 768px) {
+    display: block;
+    margin-top: 20px;
+  }
+
   > div:first-of-type span {
     height: 200px;
     width: 200px;
     border-radius: 50%;
     background: #eee;
     display: block;
+    border: 2px solid #ddd;
+
+    @media (max-width: 768px) {
+      width: 130px;
+      height: 130px;
+      float: right;
+      margin-left: 20px;
+    }
   }
 
   > div:last-of-type {
     margin-top: 20px;
     margin-left: 40px;
+
+    @media (max-width: 768px) {
+      margin: 0;
+    }
 
     p {
       font-style: italic;
@@ -123,6 +142,10 @@ const Underlay = styled.div`
   top: 0;
   background: ${({ theme }) => theme.color2};
   z-index: -2;
+
+  @media (max-width: 768px) {
+    width: 98vw;
+  }
 `
 
 const Type = styled.span`
