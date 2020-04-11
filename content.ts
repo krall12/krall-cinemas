@@ -24,7 +24,7 @@ export default {
     ],
   },
   hero: {
-    videoSrc: '',
+    videoSrc: '/hero-vid-720.mov',
     mainText: 'Cinematic Wedding Videography',
     subText: 'Capturing Priceless Moments & Memories',
   },
