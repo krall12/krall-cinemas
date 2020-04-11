@@ -89,6 +89,7 @@ const ContentWrap = styled.div`
   h3 {
     margin-top: 14px;
     font-size: 30px;
+    color: #333;
   }
 
   p {

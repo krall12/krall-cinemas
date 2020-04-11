@@ -31,6 +31,10 @@ export default () => {
 const Section = styled.section`
   padding: 80px 0;
   overflow-x: hidden;
+
+  @media (max-width: 768px) {
+    padding: 40px 0 60px 0;
+  }
 `
 
 const Video = styled.video`
@@ -49,10 +53,22 @@ const MainText = styled.h1`
   font-size: 50px;
   color: ${({ theme }) => theme.color1};
   margin-bottom: 14px;
+
+  @media (max-width: 768px) {
+    font-size: 34px;
+  }
 `
 
 const SubText = styled.p`
   font-size: 24px;
   color: ${({ theme }) => theme.color1};
   margin-bottom: 80px;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+  }
 `

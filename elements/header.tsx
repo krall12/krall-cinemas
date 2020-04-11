@@ -79,7 +79,6 @@ const LinkTag = styled.a`
 
   @media (max-width: ${BREAK_MOBILE}) {
     padding: 10px;
-    padding-bottom: 14px;
     font-size: 14px;
   }
 `
