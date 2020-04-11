@@ -61,7 +61,23 @@ export default {
     works: [
       {
         type: 'WEDDING DAY',
-        description: `Yadeli & Austin got married on December 27th 2019 at The Venue 1902 in Sanford, Florida.`,
+        description: `Elizabeth and Samuel got married on March 14th, 2020 at The Highland Manor in Apopka.`,
+        youtubeUrl: 'https://www.youtube.com/embed/Wlrz6vckzMQ',
+        testimonialAsset: '',
+        testimonial: ``,
+        testimonialBy: 'Elizabeth & Samuel',
+      },
+      {
+        type: 'WEDDING DAY',
+        description: `Britney and Eric got married on February 16th at The Hastings Ranch & Farm in St. Cloud, FL.`,
+        youtubeUrl: 'https://www.youtube.com/embed/QJ5aWcCDbz8',
+        testimonialAsset: '',
+        testimonial: `I am soooo thankful we found you and you were available to capture our special day. I felt you were professional, responsive, and very personable. Even with our tight deadline (booked the weekend before my wedding) you made the process so easy. Now, the videos... OMG, you nailed it. We are emotional watching the teaser and the highlights. With very little guidance you knew the moments that would "pop" the video outside of the typical shots, great job. Your speedy service is very much appreciated. Thank you Megan.`,
+        testimonialBy: 'Britney & Eric',
+      },
+      {
+        type: 'WEDDING DAY',
+        description: `Yadeli and Austin got married on December 27th 2019 at The Venue 1902 in Sanford, Florida.`,
         youtubeUrl: 'https://www.youtube.com/embed/hs6zNz6uBns',
         testimonialAsset: '',
         testimonial: `This beautiful human is so incredibly amazing, she made my day so beautiful and captured so many precious moments. I seriously cannot thank her enough for all she did for me on such a special day. She’s a ninja and so fabulous and I am so excited for her! Thank you Megan for being the best!`,

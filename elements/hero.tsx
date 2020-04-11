@@ -18,7 +18,7 @@ export default () => {
         <MainText>{content.hero.mainText}</MainText>
         <SubText>{content.hero.subText}</SubText>
         <Video autoPlay loop muted playsInline>
-          <source src="/hero.mp4" type="video/mp4" />
+          <source src="/hero2.mp4" type="video/mp4" />
         </Video>
         <Circle animate={{ opacity: 0.2 }} transition={transition} />
         <Circle animate={{ scale: 1.2 }} transition={transition} css="right: -40px; left: auto; top: 40vh;" />

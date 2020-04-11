@@ -42,9 +42,6 @@ export default () => {
             {work.testimonial && (
               <Testimonial>
                 <div>
-                  <span />
-                </div>
-                <div>
                   <p>"{work.testimonial}"</p>
                   <span>- {work.testimonialBy}</span>
                 </div>
@@ -94,31 +91,13 @@ const Description = styled.p`
 const Testimonial = styled.div`
   display: flex;
   align-items: flex-start;
-  margin-top: 40px;
 
   @media (max-width: 768px) {
     display: block;
     margin-top: 20px;
   }
 
-  > div:first-of-type span {
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    background: #eee;
-    display: block;
-    border: 2px solid #ddd;
-
-    @media (max-width: 768px) {
-      width: 130px;
-      height: 130px;
-      float: right;
-      margin-left: 20px;
-    }
-  }
-
-  > div:last-of-type {
-    margin-top: 20px;
+  > div {
     margin-left: 40px;
 
     @media (max-width: 768px) {
@@ -129,6 +108,11 @@ const Testimonial = styled.div`
       font-style: italic;
       line-height: 2;
       margin-bottom: 10px;
+    }
+
+    span {
+      font-size: 15px;
+      color: #222;
     }
   }
 `
