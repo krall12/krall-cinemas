@@ -17,10 +17,6 @@ export default {
         title: 'Portfolio',
         href: '#portfolio',
       },
-      {
-        title: 'Pricing',
-        href: '#pricing',
-      },
     ],
   },
   hero: {
@@ -33,7 +29,7 @@ export default {
     subText: 'Storyteller at Heart',
     meAsset: '/me.jpg',
     description:
-      'Hi I am Megan! I am 26 years old and started filming in 2019. Ever since I picked up a camera, I knew this was meant for me. I put my whole heart and soul into creating these films. I love it so much because I help couples hold on to these very special memories forever.',
+      "Hi I'm Megan! I am 26 years old and started filming in 2019. Ever since I picked up a camera, I knew this was meant for me. I put my whole heart and soul into creating these films. I love it so much because I help couples hold on to these very special memories forever.",
   },
   services: {
     mainText: 'My Services',
@@ -64,8 +60,8 @@ export default {
         description: `Elizabeth and Samuel got married on March 14th, 2020 at The Highland Manor in Apopka.`,
         youtubeUrl: 'https://www.youtube.com/embed/Wlrz6vckzMQ',
         testimonialAsset: '',
-        testimonial: ``,
-        testimonialBy: 'Elizabeth & Samuel',
+        testimonial: `Megan accepted the job of filming my sister's wedding on very short notice and still gave us a great price. Originally, we agreed that Megan would simply provide us with the raw footage, but to our surprise Megan went the extra mile and put a highlight video together for us, and it was stunning, just like all the footage she captured.`,
+        testimonialBy: 'Robert (brother of bride)',
       },
       {
         type: 'WEDDING DAY',
