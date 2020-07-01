@@ -57,6 +57,14 @@ export default {
     works: [
       {
         type: 'WEDDING DAY',
+        description: `Lizzy & Zach got married on June 6th, 2020 at the Alfond Inn in Winter Park, FL. They had to postpone their big wedding until later this year due to the coronavirus. They still wanted to get married on their original date so they had a beautiful and intimate ceremony with immediate family, and of course their super cute pup, Hazel! And cute little fun fact, the Alfond Inn is where Zach proposed!`,
+        youtubeUrl: 'https://www.youtube.com/embed/aZyn74ZKuDA',
+        testimonialAsset: '',
+        testimonial: `Megan (Krall Cinemas) is an amazing videographer! She made a video for my elopement and it was beyond perfect. I contacted Megan with only three weeks before my wedding day (due to Covid we had to change our wedding plans quickly) and she was able to accommodate our date perfectly! She captured every detail so beautifully, and when my husband and I watch it, we are able to remember all our favorite, special moments of our day so perfectly. It seriously brings me to tears when I watch it. She has such a creative gift, and it is shown in her work! She is also super friendly and made the whole process of being recorded super comfortable- I didn’t even realize she was there most of the time- in a good way! The turn around time was also very quick for the video, which was great because I was so excited to see it!! I highly recommend Krall Cinemas to anyone wanting a wedding video or for any special moment you want to remember forever. She is the best!`,
+        testimonialBy: 'Lizzy & Zach',
+      },
+      {
+        type: 'WEDDING DAY',
         description: `Elizabeth and Samuel got married on March 14th, 2020 at The Highland Manor in Apopka.`,
         youtubeUrl: 'https://www.youtube.com/embed/Wlrz6vckzMQ',
         testimonialAsset: '',
