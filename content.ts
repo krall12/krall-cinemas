@@ -74,7 +74,7 @@ export default {
       {
         type: 'WEDDING DAY',
         description: `Kristen and Jeremy got married on September 4th, 2020 in Rockledge, FL`,
-        youtubeUrl: 'https://www.youtube.com/watch?v=8EkuWfnWxvQ',
+        youtubeUrl: 'https://www.youtube.com/embed/8EkuWfnWxvQ',
         testimonialAsset: '',
         testimonial: `Megan was absolutely amazing and we have already started recommending her to other engaged couples. We originally booked her services for a large wedding in Apopka, but due to Covid it was postponed. We threw together a small wedding about 1.5 hours away from the original venue and a week prior contacted her. She was incredibly flexible and we appreciated everything she did for us especially with the last minute planning! We say she was the best decision of our wedding (other than getting married!) because we truly love the product she gave us! Her prices are extremely reasonable and were the reason we were able to afford a videographer. She gave us a priceless video that we adore and will cherish for the rest of our lives.`,
         testimonialBy: 'Kristen & Jeremy',
